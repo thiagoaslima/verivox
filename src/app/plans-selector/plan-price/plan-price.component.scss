@@ -1,0 +1,70 @@
+@import '~src/scss/variables';
+@import '~src/scss/mixins';
+
+:host {
+  display: flex;
+  flex-flow: row;
+
+  @include bigger-than('tablet') {
+    flex-flow: column;
+    text-align: right;
+    align-items: flex-end;
+
+    & > button {
+      flex: 0 0 auto;
+    }
+
+    & > .plan-price {
+      padding-bottom: 20px;
+      flex: 1 1 auto;
+    }
+  }
+
+}
+
+button {
+  color: $dark-text-color;
+  text-transform: uppercase;
+  text-decoration: none;
+  background-color: white;
+  padding: 5px 10px;
+  border: 2px solid ligthen($dark-text-color, 10%);
+  display: inline-block;
+  transition: all 0.4s ease 0s;
+
+  @include bigger-than('tablet') {
+    max-width: 150px;
+  }
+
+  &:hover {
+    color:$bright-text-color;
+    background: $brand-color;
+    border-color: $brand-color;
+    box-shadow: 2px 2px transparentize($dark-text-color, 0.85);
+  }
+}
+
+button {
+  margin-left: 5px;
+}
+
+.plan-price {
+  font-size: 24px;
+  font-weight: 900;
+  margin: 0;
+  color: $brand-color;
+}
+
+.button-text {
+  display: none;
+
+  @include bigger-than('tablet') {
+    display: inline;
+  }
+}
+
+.button-icon {
+  @include bigger-than('tablet') {
+    display: none;
+  }
+}

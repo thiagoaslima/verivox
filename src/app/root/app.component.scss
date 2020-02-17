@@ -1,0 +1,14 @@
+@import '~src/scss/variables';
+
+:host {
+  display: grid;
+  grid-template-rows: auto 1fr;
+}
+
+.fake-navbar {
+  position: sticky;
+  top: 0;
+  background-color: lighten($brand-color, 30%);
+  margin-bottom: 20px;
+  padding: 20px;
+}

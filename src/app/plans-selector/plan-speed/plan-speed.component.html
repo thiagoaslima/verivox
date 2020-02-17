@@ -1,0 +1,15 @@
+<div class="speed-list">
+
+  <p class="speed-tag speed-download">
+    <app-icon class="speed-tag--icon" name="download" size="small"></app-icon>
+    <span class="speed-tag--text ">Download</span>
+  </p>
+  <p class="speed-value speed-download">{{ speeds?.download | number:'1.0-0' }} {{ unit }}</p>
+
+  <p class="speed-tag speed-upload">
+    <app-icon class="speed-tag--icon" name="upload" size="small"></app-icon>
+    <span class="speed-tag--text">Upload</span>
+  </p>
+  <p class="speed-value speed-upload">{{ speeds?.upload | number:'1.0-0' }} {{ unit }}</p>
+
+</div>

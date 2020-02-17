@@ -1,0 +1,76 @@
+@import '~src/scss/mixins';
+@import '~src/scss/variables';
+
+:host {
+  display: block;
+}
+
+.speed-list {
+  display: grid;
+  grid-template-rows: auto auto;
+  grid-template-columns: max-content minmax(min-content, max-content);
+  grid-gap: 10px 0;
+  margin: 0;
+  padding: 0;
+}
+
+.speed-tag {
+  display: flex;
+  align-items: center;
+  background-color: white;
+  padding: 2px 10px;
+  margin: 0;
+  border-radius: 3px 0 0 3px;
+  border-right: 0;
+
+  @include bigger-than('tablet') {
+    flex-flow: row nowrap;
+    border: 1px solid $brand-color;
+    background-color: $brand-color;
+  }
+}
+
+.speed-tag--icon {
+  width: 20px;
+  fill: $brand-color;
+
+  @include bigger-than('tablet') {
+    fill: white;
+  }
+
+  @include bigger-than('desktop') {
+    margin-right: 5px;
+  }
+}
+
+.speed-tag--text {
+  font-size: 10px;
+  line-height: 1;
+  font-weight: 900;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  color: white;
+
+  @include smaller-than('desktop') {
+    display: none;
+  }
+}
+
+.speed-value {
+  display: flex;
+  align-items: center;
+  padding: 0 8px;
+  border-radius: 0 3px 3px 0;
+  border-left: 0;
+  margin: 0;
+
+  @include bigger-than('tablet') {
+    border: 1px solid orange;
+  }
+}
+
+.speed-upload {
+  @include smaller-than('tablet') {
+    display: none;
+  }
+}

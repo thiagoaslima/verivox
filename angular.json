@@ -1,6 +1,6 @@
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
-  "version": 1, 
+  "version": 1,
   "newProjectRoot": "projects",
   "projects": {
     "verivox-ui": {
@@ -28,9 +28,11 @@
               "src/assets"
             ],
             "styles": [
+              "node_modules/normalize.css",
               "src/styles.scss"
             ],
-            "scripts": []
+            "scripts": [],
+            "webWorkerTsConfig": "tsconfig.worker.json"
           },
           "configurations": {
             "production": {
@@ -92,6 +94,7 @@
               "src/assets"
             ],
             "styles": [
+              "node_modules/normalize.css",
               "src/styles.scss"
             ],
             "scripts": []
@@ -103,7 +106,8 @@
             "tsConfig": [
               "tsconfig.app.json",
               "tsconfig.spec.json",
-              "e2e/tsconfig.json"
+              "e2e/tsconfig.json",
+              "tsconfig.worker.json"
             ],
             "exclude": [
               "**/node_modules/**"
@@ -123,6 +127,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "verivox-ui"
+    }
+  },
+  "defaultProject": "verivox-ui",
+  "cli": {
+    "analytics": "7d9fc785-672f-4620-9c85-93892b057c62"
+  }
 }

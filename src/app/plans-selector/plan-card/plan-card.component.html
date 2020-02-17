@@ -1,0 +1,17 @@
+<ng-container *ngIf="plan">
+  <div class="plan-header">
+    <p class="card-title">{{ title }}</p>
+  </div>
+
+  <div class="plan-attributes">
+    <app-plan-speed [speeds]="speeds" unit="Mbit/s"></app-plan-speed>
+  </div>
+
+  <div class="plan-description">
+
+  </div>
+
+  <div class="plan-selection">
+    <app-plan-price [price]="price"></app-plan-price>
+  </div>
+</ng-container>
